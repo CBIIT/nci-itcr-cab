@@ -1,6 +1,9 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 Source/*
+demo
+.well-known
+cgi-bin
 
 # Ignore paths that contain user-generated content.
 sites/*/files
