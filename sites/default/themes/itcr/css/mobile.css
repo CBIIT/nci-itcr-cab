@@ -16,7 +16,7 @@ main { padding: 10px 0; }
 .row.full-width.header { height: auto; }
 .left-head-block { margin: 5px 0; }
 .minibar .right-banner-block { padding: 10px 10px 0; }
-.right-head-block-menu { position: absolute; right: 0; }
+.right-head-block-menu { position: absolute; right: 0; top: 0; }
 .main-menu-block { border-width: 0; }
 .view-informatics-tools .isotope-element { width: 100% !important; }
 }
