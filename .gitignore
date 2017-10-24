@@ -6,7 +6,6 @@ demo
 cgi-bin
 
 # Ignore paths that contain user-generated content.
-sites/*/files
 sites/*/private
 =======
 sites/*/*settings*.php
