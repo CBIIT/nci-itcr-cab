@@ -118,10 +118,7 @@ ul.slide__content { margin: 0 .75em !important; }
 .homepage-funding-opp-block .views-field-title { color: #415a73; font-size: 1.1em; font-weight: bold; line-height: 1.5em; }
 .homepage-funding-opp-block .views-field-nothing hr { height:2px; border:none; color:#CF2A1C; background-color:#CF2A1C; width:40%; text-align:center; margin: 0 auto; }
 .homepage-funding-opp-block .views-field-body { color: #415a73; line-height: 1.3em; }
-/*.homepage-funding-opp-block:hover { background-color: #395571; }
-.homepage-funding-opp-block:hover .views-field-field-icon, .homepage-funding-opp-block:hover .views-field-title, .homepage-funding-opp-block:hover .views-field-nothing, .homepage-funding-opp-block:hover .views-field-body { display: none; }
-.homepage-funding-opp-block .funding-opps-full-body { display: none; }
-.homepage-funding-opp-block:hover .funding-opps-full-body { display: block; color: #FFFFFF; font-size: .8em; }*/
+.homepage-funding-opp-block .field-content a { color: #6D1710 !important; }
 
 .homepage-latest-news-block .view-id-homepage_blocks .view-content { text-align: center; position: relative; }
 .homepage-latest-news-block { float: left; width:295px; height:240px; padding:0; margin:12px; display: inline-grid; text-align: center; border: 1px solid #dcdcdc; }

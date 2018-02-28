@@ -141,6 +141,8 @@
 		<?php if (!empty($page['slider'])): ?>
 		<div class="skip-link">
 			<a class="element-invisible element-focusable" href="#">Use the left and right arrows to navigate slider</a>
+			<a class="element-invisible element-focusable StopSliderClass" href="#">Pause</a>
+			<a class="element-invisible element-focusable StartSliderClass" href="#">Play</a>
 		</div>
 		<!--/.featured -->
 		<section class="l-slider">

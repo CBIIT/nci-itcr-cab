@@ -23,17 +23,24 @@
                         $('.tp-bannertimer', $(this)).addClass('tp-bottom');
                     }
                     var api = $('.rs-banner', $(this)).show().revolution(data.options);
-                    $('.tp-caption[data-link]', $(this)).once('click', function(){
-                      $(this).click(function(){
-                        if($(this).data('link') == 'next'){
-                          api.revnext();
-                        }
-                        else if($(this).data('link') == 'back'){
-                          api.revprev();
-                        }else{
-                          window.location = $(this).data('link');
-                        }
-                      });
+                    $('.tp-caption[data-link]', $(this)).once('click', function () {
+                        $(this).click(function () {
+                            if ($(this).data('link') == 'next') {
+                                api.revnext();
+                            } else if ($(this).data('link') == 'back') {
+                                api.revprev();
+                            } else {
+                                window.location = $(this).data('link');
+                            }
+                        });
+                    });
+                    $('.StopSliderClass').on('click', function () {
+                        api.revpause();
+//                        alert("video paused");
+                    });
+                    $('.StartSliderClass').on('click', function () {
+                        api.revnext();
+//                        alert("video played");
                     });
                 });
             });
