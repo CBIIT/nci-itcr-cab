@@ -3,12 +3,13 @@ header.columns { /*border: 1px solid #000000;*/ }
 html, body { overflow: overflow-y: scroll; overflow-x: hidden; }
 body { background-color: #FFFFFF; font-family: 'Lato', sans-serif; font-size: 14px; text-shadow: 1px 1px 1px rgba(0,0,0,0.004); text-rendering: optimizeLegibility !important;/* -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;*/ }
 main { color:#4b4a4a; padding: 0; margin: 30px 0 50px 0; }
-.row.full-width.minibar { max-width: 100% !important; margin:20px 0; }
+.row.full-width.minibar { max-width: 100% !important; margin:40px 0 20px 0; }
 .row.full-width.minibarslogan { max-width: 100% !important; }
 .page { background-color: #ffffff; max-width: 100% !important; }
 .row.full-width.header { max-width: 100% !important; margin: 0; padding: 0 20px; }
 .row.full-width.header-banner { background: #8b8a8f url("../images/title-bg.jpg") no-repeat scroll center top; display: flex; justify-content: left; align-items: center; max-width: 100% !important; height: 145px; max-height: 145px; margin-bottom:10px; }
 .row.full-width-funding-opps { background: #f3f3f3 no-repeat scroll center top; max-width: 100% !important; }
+#admin-menu, #admin-menu .dropdown { z-index: 8001; }
 
 
 /*.row.full-width-slider { padding: 50px 0; position: relative; margin-top: -120px;  max-width: 100% !important; }*/
