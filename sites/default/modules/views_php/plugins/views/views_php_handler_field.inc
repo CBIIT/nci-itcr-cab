@@ -114,7 +114,10 @@ class views_php_handler_field extends views_handler_field {
   function php_pre_execute() {
     // Execute static PHP code.
     if (!empty($this->options['php_setup'])) {
-      $function = create_function('$view, $handler, &$static', $this->options['php_setup'] . ';');
+      $code = $this->options['php_setup'];
+      $function = function($view, $handler, &$static) use ($code) {
+        eval($code);
+      };
       ob_start();
       $function($this->view, $this, $this->php_static_variable);
       ob_end_clean();
@@ -128,7 +131,10 @@ class views_php_handler_field extends views_handler_field {
   function php_post_execute() {
     // Execute value PHP code.
     if (!empty($this->options['php_value'])) {
-      $function = create_function('$view, $handler, &$static, $row', $this->options['php_value'] . ';');
+      $code = $this->options['php_value'];
+      $function = function($view, $handler, &$static, $row) use ($code) {
+        eval($code);
+      };
       ob_start();
       foreach ($this->view->result as $i => &$row) {
         $normalized_row = new stdClass;
@@ -149,7 +155,10 @@ class views_php_handler_field extends views_handler_field {
     if (!empty($this->options['use_php_click_sortable']) && !empty($this->php_click_sort_order)) {
       if ($this->options['use_php_click_sortable'] == self::CLICK_SORT_PHP) {
         if (!empty($this->options['php_click_sortable'])) {
-          $this->php_click_sort_function = create_function('$view, $handler, &$static, $row1, $row2', $this->options['php_click_sortable'] . ';');
+          $code = $this->options['php_click_sortable'];
+          $this->php_click_sort_function = function($view, $handler, &$static, $row1, $row2) use ($code) {
+            return eval($code);
+          };
         }
       }
       else {
@@ -204,7 +213,10 @@ class views_php_handler_field extends views_handler_field {
    */
   function render($values) {
     if (!empty($this->options['php_output'])) {
-      $this->php_output_lamda_function = create_function('$view, $handler, &$static, $row, $data, $value', ' ?>' . $this->options['php_output'] . '<?php ');
+      $code = $this->options['php_output'];
+      $this->php_output_lamda_function = function($view, $handler, &$static, $row, $data, $value) use ($code) {
+        eval('?>' . $code);
+      };
 
       $normalized_row = new stdClass;
       if (empty($this->view->style_plugin->rendered_fields)) {
